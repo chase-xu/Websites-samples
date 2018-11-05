@@ -1,0 +1,79 @@
+/*This is less sheet for project*/
+@color-Background: rgb(189, 188, 185);
+
+body {
+    background-color: @color-Background;
+    padding: 5%;
+    >header {
+        background-color: rgb(187, 207, 224);
+        font-size: 1.8em;
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+        padding-left: 0.3em;
+        border-bottom-style: double;
+        border-bottom-width: 0.3em;
+    }
+}
+
+main {
+    background-color: beige;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    >nav {
+        @nav-fontsize: 1.3em;
+        padding-top: 0.8em;
+        border-bottom: solid black 0.1em;
+        position: relative;
+        a {
+           text-align: left;
+           font-size: @nav-fontsize;
+           text-decoration: none;
+           padding-right: 1em;
+           color: black;
+           &:visited {
+               color: blue;
+           }
+           &:hover {
+               font-size: @nav-fontsize + 0.5em;
+           }
+        }
+    }
+    >div {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+
+        >img {
+            width: 100%;
+            height: 80%;
+            padding-top: 1em;
+        }
+
+        .playground {
+            width: 60%;
+            height: 60%;
+        }
+        
+        .gasmask {
+            width: 30%;
+            height: 40%;
+        }
+
+        .programs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        >ul {
+            list-style-type: none;
+            li {
+                padding-bottom: 0.5em;
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+
+
+}
