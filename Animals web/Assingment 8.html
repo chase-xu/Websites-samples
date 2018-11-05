@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Assignment 8</title>
+            <script src="jquery-3.2.1.min.js" type="text/javascript" defer></script>
+            <link rel="stylesheet" href="Assingment 8.css">
+        </head>
+        <body>
+            <div id="wrapper">
+                <main>
+                    <input type="button" value="Griffes" onclick="griffes()" >
+                    <input type="button" value="Tigers" onclick="tigers()" >
+                    <input type="button" value="Zebras" onclick="zebras()" >                
+                    <img src="image/giraffes.jpg" alt="giraffes" width="923" height="600">
+                </main>
+                <h2 id="giraffe_head">Giraffes!</h2>
+                <p id="giraffe">
+                    The giraffe (Giraffa) is a genus of African even-toed ungulate mammals, the tallest living terrestrial animals and the largest ruminants. The genus currently consists of one species, Giraffa camelopardalis, the type species. Seven other species are extinct, prehistoric species known from fossils. Taxonomic classifications of one to eight extant giraffe species have been described, based upon research into the mitochondrial and nuclear DNA, as well as morphological measurements of Giraffa, but the IUCN currently recognizes only one species with nine subspecies.
+                </p>
+                <h2 id="tiger_head" hidden>Tigers!</h2>
+                <p id="tiger" hidden>
+                    The tiger (Panthera tigris) is the largest cat species, most recognizable for their pattern of dark vertical stripes on reddish-orange fur with a lighter underside. The species is classified in the genus Panthera with the lion, leopard, jaguar, and snow leopard. Tigers are apex predators, primarily preying on ungulates such as deer and bovids. They are territorial and generally solitary but social animals, often requiring large contiguous areas of habitat that support their prey requirements. This, coupled with the fact that they are indigenous to some of the more densely populated places on Earth, has caused significant conflicts with humans.
+                </p>
+                <h2 id="zebras_head" hidden>Zebras!</h2>
+                <p id="zebras" hidden>
+                    The unique stripes of zebras make them one of the animals most familiar to people. They occur in a variety of habitats, such as grasslands, savannas, woodlands, thorny scrublands, mountains, and coastal hills. However, various anthropogenic factors have had a severe impact on zebra populations, in particular hunting for skins and habitat destruction. Grévy's zebra and the mountain zebra are endangered. While plains zebras are much more plentiful, one subspecies, the quagga, became extinct in the late 19th century – though there is currently a plan, called the Quagga Project, that aims to breed zebras that are phenotypically similar to the quagga in a process called breeding back.
+                </p>
+            </div>
+            
+        </body>
+        <script>
+            function griffes() {
+                $("body").css("background-image", 'url("image/giraffebg.png")');
+                $("img").attr("src", "image/giraffes.jpg");
+                $("h2").html("Giraffes!");
+                $('#giraffe_head').show();
+                $('#giraffe').show();
+                $('#tiger_head').hide();
+                $('#tiger').hide();
+                $('#zebras_head').hide();
+                $('#zebras').hide();
+            }
+            function tigers() {
+                $("body").css("background-image", 'url("image/tigerbg.png")');
+                $("img").attr("src", "image/tigers.jpg");
+                $("h2").html("Tigers!");
+                $('#tiger_head').show();
+                $('#tiger').show();
+                $('#giraffe_head').hide();
+                $('#giraffe').hide();
+                $('#zebras_head').hide();
+                $('#zebras').hide();
+            }
+            function zebras() {
+                $("body").css("background-image", 'url("image/zebrabg.png")');
+                $("img").attr("src", "image/zebras.jpg");
+                $("h2").html("Zebras!");
+                $('#tiger_head').hide();
+                $('#tiger').hide();
+                $('#giraffe_head').hide();
+                $('#giraffe').hide();
+                $('#zebras_head').show();
+                $('#zebras').show();                
+            }
+        </script>
+    </html>
